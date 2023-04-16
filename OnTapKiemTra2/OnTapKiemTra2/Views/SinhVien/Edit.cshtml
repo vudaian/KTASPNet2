@@ -1,0 +1,33 @@
+﻿@model OnTapKiemTra2.Models.Sinhvien
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="col-md-6">
+    <h1>Sửa thông tin sinh viên</h1>
+    <form action="/SinhVien/Edit" method="post">
+        <div class="form-group">
+            <label asp-for="Msv"></label>
+            <input asp-for="Msv" class="form-control" value="@Model.Msv"/>
+            <span asp-validation-for="Msv" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="TenSinhVien"></label>
+            <input asp-for="TenSinhVien" class="form-control" value="@Model.TenSinhVien"/>
+            <span asp-validation-for="TenSinhVien" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Lop"></label>
+            <input asp-for="Lop" class="form-control" value="@Model.Lop"/>
+            <span asp-validation-for="Lop" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Diem"></label>
+            <input asp-for="Diem" class="form-control" value="@Model.Diem"/>
+            <span asp-validation-for="Diem" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" name="name" value="Sửa" class="btn btn-success" />
+        </div>
+    </form>
+</div>
